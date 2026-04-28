@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Meridian · Product card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+body { margin: 0; background: var(--color-neutral-50); padding: 24px; box-sizing: border-box; width: 700px; font-family: var(--font-family-text); color: var(--color-neutral-950); }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card {
+  background: #fff;
+  border-radius: var(--radius-none);
+  box-shadow: var(--elevation-2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ph {
+  aspect-ratio: 4/3;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #d9c4a8 0%, #b89978 50%, #e3d5bf 100%);
+}
+.ph.two {
+  background: linear-gradient(135deg, #5a5148 0%, #3c342c 50%, #6b5e52 100%);
+}
+.ph::after { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 60% at 50% 100%, rgba(0,0,0,0.15), transparent); }
+.flag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: var(--font-family-utility);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 8px;
+  background: var(--color-red-800);
+  color: #fff;
+  border-radius: 0;
+  z-index: 1;
+}
+.heart { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,0.85); border-radius: 999px; display: flex; align-items: center; justify-content: center; color: var(--color-neutral-950); }
+.heart svg { width: 18px; height: 18px; }
+.body { padding: 14px 16px 16px; }
+.eyebrow { font-family: var(--font-family-utility); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.48px; color: var(--color-neutral-600); }
+.title { font-family: var(--font-family-product); font-weight: 600; font-size: 18px; letter-spacing: 0.48px; text-transform: uppercase; margin: 6px 0 4px; }
+.sub { font-size: 13px; color: var(--color-neutral-600); margin-bottom: 10px; }
+.prices { display: flex; align-items: baseline; gap: 10px; }
+.price { font-weight: 700; font-size: 18px; color: var(--color-red-800); }
+.strike { font-size: 13px; color: var(--color-neutral-500); text-decoration: line-through; }
+.save { font-size: 11px; color: var(--color-neutral-600); margin-left: auto; }
+</style></head><body>
+<div class="grid">
+  <div class="card">
+    <div class="ph"><span class="flag">-10%</span>
+      <div class="heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M 12 20 L 4.5 12.8 C 2 10.2 3.8 5.8 7.4 5.8 C 9.3 5.8 10.9 6.9 12 8.4 C 13.1 6.9 14.7 5.8 16.6 5.8 C 20.2 5.8 22 10.2 19.5 12.8 L 12 20 Z"/></svg></div>
+    </div>
+    <div class="body">
+      <div class="eyebrow">Canapé d'angle</div>
+      <div class="title">NIHAD</div>
+      <div class="sub">Réversible convertible coffre · Beige</div>
+      <div class="prices">
+        <span class="price">1 099 €</span>
+        <span class="strike">1 199 €</span>
+        <span class="save">Économisez 100 €</span>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ph two">
+      <div class="heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M 12 20 L 4.5 12.8 C 2 10.2 3.8 5.8 7.4 5.8 C 9.3 5.8 10.9 6.9 12 8.4 C 13.1 6.9 14.7 5.8 16.6 5.8 C 20.2 5.8 22 10.2 19.5 12.8 L 12 20 Z"/></svg></div>
+    </div>
+    <div class="body">
+      <div class="eyebrow">Fauteuil</div>
+      <div class="title">JUNO</div>
+      <div class="sub">Velours côtelé · Cognac</div>
+      <div class="prices">
+        <span class="price" style="color: var(--color-neutral-950);">489 €</span>
+        <span class="save">Livraison offerte</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

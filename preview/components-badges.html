@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Meridian · Badges &amp; flags</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body {
+    margin: 0;
+    background: #fff;
+    padding: 18px 22px 20px;
+    box-sizing: border-box;
+    width: 700px;
+    font-family: var(--font-family-text);
+    color: var(--color-neutral-950);
+  }
+
+  /* ------- Promo flags ------- */
+  .promo-row {
+    display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--color-neutral-150);
+    margin-bottom: 14px;
+  }
+  .lbl {
+    font-family: var(--font-family-code);
+    font-size: 10px;
+    color: var(--color-neutral-550);
+    width: 84px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .flag {
+    font-family: var(--font-family-utility);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-flag);
+    padding: 4px 8px;
+    border-radius: var(--radius-flag);
+    color: var(--color-neutral-0);
+    background: var(--color-neutral-950);
+    display: inline-block;
+  }
+  .flag-promo   { background: var(--color-red-800); }
+  .flag-new     { background: var(--color-neutral-950); }
+  .flag-soldes  {
+    background: var(--color-neutral-0);
+    color: var(--color-neutral-950);
+    border: 1px solid var(--color-neutral-950);
+    padding: 3px 7px;
+  }
+  .flag-stock   { background: var(--color-green-900); color: var(--color-green-200); }
+  .flag-rupture { background: var(--color-neutral-500); }
+
+  /* ------- Matrix : 3 styles × tons (DS only) ------- */
+  .matrix {
+    display: grid;
+    grid-template-columns: 84px repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 6px;
+    align-items: center;
+  }
+  .matrix .head {
+    font-family: var(--font-family-code);
+    font-size: 9px;
+    color: var(--color-neutral-450);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-bottom: 2px;
+  }
+  .matrix .tone-lbl {
+    font-family: var(--font-family-code);
+    font-size: 10px;
+    color: var(--color-neutral-550);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .matrix .stack {
+    display: flex; flex-direction: column; gap: 4px;
+    align-items: flex-start;
+  }
+
+  /* Badge primitive */
+  .b {
+    font-family: var(--font-family-utility);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-flag);
+    padding: 4px 8px;
+    border-radius: var(--radius-flag);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid transparent;
+  }
+  .b .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+
+  /* ===== Filled — fond clair / texte foncé ===== */
+  .b.fill.neutral { background: var(--color-neutral-950); color: var(--color-neutral-0); }
+  .b.fill.muted   { background: var(--color-neutral-150); color: var(--color-neutral-550); }
+  .b.fill.red     { background: var(--color-red-200);    color: var(--color-red-800); }
+  .b.fill.green   { background: var(--color-green-200);  color: var(--color-green-900); }
+  .b.fill.orange  { background: var(--color-orange-200); color: var(--color-orange-700); }
+  .b.fill.yellow  { background: var(--color-yellow-200); color: var(--color-yellow-600); }
+
+  /* ===== Filled — version inversée ===== */
+  .b.fill.neutral-inv { background: var(--color-neutral-0);   color: var(--color-neutral-950); border-color: var(--color-neutral-200); }
+  .b.fill.muted-inv   { background: var(--color-neutral-550); color: var(--color-neutral-150); }
+  .b.fill.red-inv     { background: var(--color-red-800);     color: var(--color-red-200); }
+  .b.fill.green-inv   { background: var(--color-green-900);   color: var(--color-green-200); }
+  .b.fill.orange-inv  { background: var(--color-orange-700);  color: var(--color-orange-200); }
+  .b.fill.yellow-inv  { background: var(--color-yellow-600);  color: var(--color-yellow-200); }
+
+  /* ===== Outline ===== */
+  .b.out          { background: var(--color-neutral-0); }
+  .b.out.neutral  { color: var(--color-neutral-950); border-color: var(--color-neutral-950); }
+  .b.out.muted    { color: var(--color-neutral-550); border-color: var(--color-neutral-300); }
+  .b.out.red      { color: var(--color-red-800);     border-color: var(--color-red-800); }
+  .b.out.green    { color: var(--color-green-900);   border-color: var(--color-green-900); }
+  .b.out.orange   { color: var(--color-orange-700);  border-color: var(--color-orange-700); }
+  .b.out.yellow   { color: var(--color-yellow-600);  border-color: var(--color-yellow-600); }
+
+  /* ===== Ghost — same as outline, no border ===== */
+  .b.ghost          { background: transparent; }
+  .b.ghost.neutral  { color: var(--color-neutral-950); }
+  .b.ghost.muted    { color: var(--color-neutral-550); }
+  .b.ghost.red      { color: var(--color-red-800); }
+  .b.ghost.green    { color: var(--color-green-900); }
+  .b.ghost.orange   { color: var(--color-orange-700); }
+  .b.ghost.yellow   { color: var(--color-yellow-600); }
+</style></head><body>
+
+  <div class="promo-row">
+    <div class="lbl">Promo</div>
+    <span class="flag flag-promo">-10%</span>
+    <span class="flag flag-new">Nouveau</span>
+    <span class="flag flag-soldes">Soldes</span>
+    <span class="flag flag-stock">En stock</span>
+    <span class="flag flag-rupture">Rupture</span>
+  </div>
+
+  <div class="matrix">
+    <div></div>
+    <div class="head">Filled</div>
+    <div class="head">Outline</div>
+    <div class="head">Ghost</div>
+
+    <div class="tone-lbl">Neutral</div>
+    <div class="stack">
+      <span class="b fill neutral"><span class="dot"></span>flag</span>
+      <span class="b fill neutral-inv"><span class="dot"></span>flag</span>
+    </div>
+    <div><span class="b out neutral"><span class="dot"></span>flag</span></div>
+    <div><span class="b ghost neutral"><span class="dot"></span>flag</span></div>
+
+    <div class="tone-lbl">Muted</div>
+    <div class="stack">
+      <span class="b fill muted"><span class="dot"></span>flag</span>
+      <span class="b fill muted-inv"><span class="dot"></span>flag</span>
+    </div>
+    <div><span class="b out muted"><span class="dot"></span>flag</span></div>
+    <div><span class="b ghost muted"><span class="dot"></span>flag</span></div>
+
+    <div class="tone-lbl">Red</div>
+    <div class="stack">
+      <span class="b fill red"><span class="dot"></span>flag</span>
+      <span class="b fill red-inv"><span class="dot"></span>flag</span>
+    </div>
+    <div><span class="b out red"><span class="dot"></span>flag</span></div>
+    <div><span class="b ghost red"><span class="dot"></span>flag</span></div>
+
+    <div class="tone-lbl">Green</div>
+    <div class="stack">
+      <span class="b fill green"><span class="dot"></span>flag</span>
+      <span class="b fill green-inv"><span class="dot"></span>flag</span>
+    </div>
+    <div><span class="b out green"><span class="dot"></span>flag</span></div>
+    <div><span class="b ghost green"><span class="dot"></span>flag</span></div>
+
+    <div class="tone-lbl">Orange</div>
+    <div class="stack">
+      <span class="b fill orange"><span class="dot"></span>flag</span>
+      <span class="b fill orange-inv"><span class="dot"></span>flag</span>
+    </div>
+    <div><span class="b out orange"><span class="dot"></span>flag</span></div>
+    <div><span class="b ghost orange"><span class="dot"></span>flag</span></div>
+
+    <div class="tone-lbl">Yellow</div>
+    <div class="stack">
+      <span class="b fill yellow"><span class="dot"></span>flag</span>
+      <span class="b fill yellow-inv"><span class="dot"></span>flag</span>
+    </div>
+    <div><span class="b out yellow"><span class="dot"></span>flag</span></div>
+    <div><span class="b ghost yellow"><span class="dot"></span>flag</span></div>
+  </div>
+
+</body></html>

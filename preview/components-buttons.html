@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Meridian · Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+body {
+  margin: 0; background: #fff;
+  padding: 18px 22px 20px;
+  box-sizing: border-box;
+  width: 700px;
+  font-family: var(--font-family-text);
+  color: var(--color-neutral-950);
+}
+
+/* ── Grid : rows = states, cols = types ── */
+.matrix {
+  display: grid;
+  grid-template-columns: 56px repeat(4, 1fr);
+  row-gap: 0;
+  column-gap: 0;
+}
+
+.state-lbl {
+  font-family: var(--font-family-code);
+  font-size: 10px;
+  color: var(--color-neutral-550);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+.col-head {
+  font-family: var(--font-family-code);
+  font-size: 10px;
+  color: var(--color-neutral-550);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px;
+}
+
+/* ── Button primitive ── */
+.btn {
+  font-family: var(--font-family-utility);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  letter-spacing: var(--letter-spacing-default);
+  border-radius: var(--radius-button);
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
+  width: 100%;
+  justify-content: center;
+}
+.arr {
+  width: 14px; height: 14px; flex-shrink: 0;
+}
+
+/* ── Primary ── */
+.primary         { background: var(--color-neutral-950); color: var(--color-neutral-0); }
+.primary.hover   { background: var(--color-neutral-800); color: var(--color-neutral-0); }
+.primary.focus   { background: var(--color-neutral-700); color: var(--color-neutral-0); }
+.primary.disabled{ background: var(--color-neutral-200); color: var(--color-neutral-400); cursor: not-allowed; }
+
+/* ── White ── */
+.white         { background: var(--color-neutral-0);   color: var(--color-neutral-950); border-color: transparent; }
+.white.hover   { background: var(--color-neutral-100); color: var(--color-neutral-950); }
+.white.focus   { background: var(--color-neutral-150); color: var(--color-neutral-950); }
+.white.disabled{ background: transparent; color: var(--color-neutral-350); cursor: not-allowed; }
+
+/* ── Secondary ── */
+.secondary         { background: var(--color-neutral-100); color: var(--color-neutral-950); }
+.secondary.hover   { background: var(--color-neutral-150); color: var(--color-neutral-950); }
+.secondary.focus   { background: var(--color-neutral-200); color: var(--color-neutral-950); }
+.secondary.disabled{ background: var(--color-neutral-100); color: var(--color-neutral-350); cursor: not-allowed; }
+
+/* ── Outline ── */
+.outline         { background: var(--color-neutral-0); color: var(--color-neutral-950); border-color: var(--color-neutral-950); }
+.outline.hover   { background: var(--color-neutral-50); color: var(--color-neutral-950); border-color: var(--color-neutral-950); }
+.outline.focus   { background: var(--color-neutral-100); color: var(--color-neutral-950); border-color: var(--color-neutral-950); }
+.outline.disabled{ background: var(--color-neutral-0); color: var(--color-neutral-350); border-color: var(--color-neutral-200); cursor: not-allowed; }
+</style></head><body>
+
+<div class="matrix">
+  <!-- Header row -->
+  <div></div>
+  <div class="col-head">Primary</div>
+  <div class="col-head">White</div>
+  <div class="col-head">Secondary</div>
+  <div class="col-head">Outline</div>
+
+  <!-- Default -->
+  <div class="state-lbl">Default</div>
+  <div class="cell"><button class="btn primary">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn white">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn secondary">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn outline">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+
+  <!-- Hover -->
+  <div class="state-lbl">Hover</div>
+  <div class="cell"><button class="btn primary hover">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn white hover">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn secondary hover">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn outline hover">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+
+  <!-- Focus -->
+  <div class="state-lbl">Focus</div>
+  <div class="cell"><button class="btn primary focus">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn white focus">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn secondary focus">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn outline focus">
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+
+  <!-- Disabled -->
+  <div class="state-lbl">Disabled</div>
+  <div class="cell"><button class="btn primary disabled" disabled>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn white disabled" disabled>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn secondary disabled" disabled>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+  <div class="cell"><button class="btn outline disabled" disabled>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    Bouton
+    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+  </button></div>
+</div>
+
+</body></html>

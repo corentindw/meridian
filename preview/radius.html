@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Meridian · Radius</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+body { margin: 0; background: #fff; padding: 18px 22px 20px; box-sizing: border-box; width: 700px; color: var(--color-neutral-950); font-family: var(--font-family-text); }
+
+.section-lbl {
+  font-family: var(--font-family-code);
+  font-size: 9px;
+  color: var(--color-neutral-450);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.row { display: flex; gap: 10px; align-items: flex-start; }
+.cell { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.sq { width: 64px; height: 64px; background: var(--color-neutral-950); }
+.lbl { font-family: var(--font-family-code); font-size: 10px; color: var(--color-neutral-950); font-weight: 700; }
+.val { font-family: var(--font-family-code); font-size: 9px; color: var(--color-neutral-550); }
+
+.divider { height: 1px; background: var(--color-neutral-150); margin: 18px 0 16px; }
+
+.sem-row { display: flex; gap: 14px; align-items: stretch; }
+.sem-cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.sem-preview {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.sem-btn {
+  font-family: var(--font-family-utility);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-md);
+  padding: 0 20px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-neutral-950);
+  color: var(--color-neutral-0);
+  border-radius: var(--radius-button);
+}
+.sem-flag {
+  font-family: var(--font-family-utility);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-flag);
+  padding: 4px 8px;
+  border-radius: var(--radius-flag);
+  display: inline-block;
+}
+.sem-flag.promo { background: var(--color-red-800);   color: var(--color-neutral-0); }
+.sem-flag.stock { background: var(--color-green-200); color: var(--color-green-900); }
+
+.sem-lbl { font-family: var(--font-family-code); font-size: 10px; color: var(--color-neutral-950); font-weight: 700; }
+.sem-val { font-family: var(--font-family-code); font-size: 9px; color: var(--color-neutral-550); text-align: center; }
+</style></head><body>
+
+<div class="section-lbl">Primitives</div>
+<div class="row">
+  <div class="cell"><div class="sq" style="border-radius: var(--radius-none)"></div><div class="lbl">radius-none</div><div class="val">0</div></div>
+  <div class="cell"><div class="sq" style="border-radius: var(--radius-sm)"></div><div class="lbl">radius-sm</div><div class="val">4</div></div>
+  <div class="cell"><div class="sq" style="border-radius: var(--radius-md)"></div><div class="lbl">radius-md</div><div class="val">8</div></div>
+  <div class="cell"><div class="sq" style="border-radius: var(--radius-lg)"></div><div class="lbl">radius-lg</div><div class="val">16</div></div>
+  <div class="cell"><div class="sq" style="border-radius: var(--radius-xl)"></div><div class="lbl">radius-xl</div><div class="val">32</div></div>
+  <div class="cell"><div class="sq" style="border-radius: var(--radius-full)"></div><div class="lbl">radius-full</div><div class="val">256</div></div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section-lbl">Sémantique · usages</div>
+<div class="sem-row">
+  <div class="sem-cell">
+    <div class="sem-preview"><span class="sem-btn">Ajouter au panier</span></div>
+    <div class="sem-lbl">radius-button</div>
+    <div class="sem-val">→ radius-none · 0</div>
+  </div>
+  <div class="sem-cell">
+    <div class="sem-preview">
+      <span class="sem-flag promo">-10%</span>
+      <span class="sem-flag stock">En stock</span>
+    </div>
+    <div class="sem-lbl">radius-flag</div>
+    <div class="sem-val">flags &amp; badges → radius-none · 0</div>
+  </div>
+</div>
+
+</body></html>

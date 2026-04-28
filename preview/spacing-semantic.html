@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Meridian · Spacing semantic</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+body { margin: 0; background: #fff; padding: 18px 24px; box-sizing: border-box; width: 700px; color: var(--color-neutral-950); font-family: var(--font-family-text); }
+.block { margin-bottom: 14px; }
+.lbl { font-family: var(--font-family-code); font-size: 10px; font-weight: 700; color: var(--color-neutral-600); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 6px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip { border: 1px solid var(--color-neutral-200); border-radius: var(--radius-md); padding: 6px 10px; font-family: var(--font-family-code); font-size: 11px; color: var(--color-neutral-950); display: inline-flex; align-items: center; gap: 8px; }
+.chip b { color: var(--color-neutral-550); font-weight: 400; }
+</style></head><body>
+<div class="block">
+  <div class="lbl">Gap · auto-layout spacing</div>
+  <div class="chips">
+    <span class="chip">gap-xs <b>2</b></span>
+    <span class="chip">gap-sm <b>4</b></span>
+    <span class="chip">gap-md <b>8</b></span>
+    <span class="chip">gap-lg <b>16</b></span>
+    <span class="chip">gap-xl <b>24</b></span>
+    <span class="chip">gap-2xl <b>32</b></span>
+    <span class="chip">gap-3xl <b>40</b></span>
+    <span class="chip">gap-4xl <b>48</b></span>
+    <span class="chip">gap-5xl <b>56</b></span>
+    <span class="chip">gap-6xl <b>64</b></span>
+  </div>
+</div>
+<div class="block">
+  <div class="lbl">Page margins · responsive</div>
+  <div class="chips">
+    <span class="chip">mobile-sm <b>8</b></span>
+    <span class="chip">mobile-md <b>16</b></span>
+    <span class="chip">mobile-lg <b>24</b></span>
+    <span class="chip">tablet-sm <b>40</b></span>
+    <span class="chip">tablet-md <b>64</b></span>
+    <span class="chip">tablet-lg <b>120</b></span>
+    <span class="chip">desktop-sm <b>64</b></span>
+    <span class="chip">desktop-md <b>144</b></span>
+    <span class="chip">desktop-lg <b>256</b></span>
+  </div>
+</div>
+<div class="block" style="margin-bottom: 0;">
+  <div class="lbl">Height · Width · padding interne</div>
+  <div class="chips">
+    <span class="chip">height-md <b>8</b></span>
+    <span class="chip">height-lg <b>16</b></span>
+    <span class="chip">height-xl <b>24</b></span>
+    <span class="chip">height-3xl <b>40</b></span>
+    <span class="chip">height-5xl <b>64</b></span>
+    <span class="chip">width-lg <b>16</b></span>
+    <span class="chip">width-2xl <b>32</b></span>
+    <span class="chip">width-4xl <b>64</b></span>
+  </div>
+</div>
+</body></html>

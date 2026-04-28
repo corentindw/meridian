@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Meridian · Semantic colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+body { margin: 0; background: #fff; font-family: var(--font-family-text); padding: 18px 22px; box-sizing: border-box; width: 700px; color: var(--color-neutral-950); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.tok { border: 1px solid var(--color-neutral-200); border-radius: var(--radius-md); padding: 8px 10px; display: flex; align-items: center; gap: 8px; }
+.sw { width: 24px; height: 24px; border-radius: var(--radius-sm); flex-shrink: 0; border: 1px solid rgba(0,0,0,0.06); }
+.meta { display: flex; flex-direction: column; min-width: 0; }
+.name { font-family: var(--font-family-code); font-size: 10px; font-weight: 700; color: var(--color-neutral-950); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.use { font-size: 10px; color: var(--color-neutral-550); line-height: 1.2; }
+</style></head><body>
+<div class="grid">
+  <div class="tok"><div class="sw" style="background: var(--color-foreground-neutral-10)"></div><div class="meta"><span class="name">fg.neutral.10</span><span class="use">Body text</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-foreground-neutral-6)"></div><div class="meta"><span class="name">fg.neutral.6</span><span class="use">Secondary</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-foreground-neutral-5)"></div><div class="meta"><span class="name">fg.neutral.5</span><span class="use">Disabled</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-background-neutral-0); border: 1px solid var(--color-neutral-200)"></div><div class="meta"><span class="name">bg.neutral.0</span><span class="use">Surface</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-background-neutral-2)"></div><div class="meta"><span class="name">bg.neutral.2</span><span class="use">Wash</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-background-neutral-10)"></div><div class="meta"><span class="name">bg.neutral.10</span><span class="use">Dark section</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-foreground-red-dark)"></div><div class="meta"><span class="name">fg.red.dark</span><span class="use">Sale price</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-background-red-dark)"></div><div class="meta"><span class="name">bg.red.dark</span><span class="use">Promo fill</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-background-red-light)"></div><div class="meta"><span class="name">bg.red.light</span><span class="use">Soft alert</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-foreground-green-dark)"></div><div class="meta"><span class="name">fg.green.dark</span><span class="use">Success</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-border-neutral-4)"></div><div class="meta"><span class="name">border.neutral.4</span><span class="use">Hairline</span></div></div>
+  <div class="tok"><div class="sw" style="background: var(--color-border-red-dark)"></div><div class="meta"><span class="name">border.red.dark</span><span class="use">Error field</span></div></div>
+</div>
+</body></html>
