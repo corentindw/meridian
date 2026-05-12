@@ -236,7 +236,7 @@ function MiniCart({ open, items, onClose, onRemove }) {
         transition: "transform .25s ease-out",
         zIndex: 50,
         display: "flex", flexDirection: "column",
-        boxShadow: "var(--elevation-3)",
+        boxShadow: "var(--elevation-md)",
       }}>
         <div style={{ padding: "20px 24px", borderBottom: "1px solid var(--color-neutral-150)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ fontFamily: "var(--font-family-utility)", fontWeight: 700, fontSize: 16, textTransform: "uppercase", letterSpacing: "0.48px" }}>Mon panier · {items.length}</div>

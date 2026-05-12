@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Meridian · Payment marks</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+body {
+  margin: 0; background: #fff;
+  padding: 18px 22px 20px;
+  box-sizing: border-box;
+  width: 700px;
+  font-family: var(--font-family-text);
+  color: var(--color-neutral-950);
+}
+.section-lbl {
+  font-family: var(--font-family-code);
+  font-size: 9px;
+  color: var(--color-neutral-450);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.row.dark-bg {
+  background: var(--color-neutral-950);
+  padding: 10px;
+  margin-left: -0px;
+}
+/* payment-mark container — ratio exact 42×24 des SVGs */
+.pm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 24px;
+  border: var(--line-stroke-base) solid var(--color-neutral-200);
+  background: var(--color-neutral-0);
+  box-sizing: content-box;
+  overflow: hidden;
+}
+.pm img {
+  width: 42px;
+  height: 24px;
+  display: block;
+  flex-shrink: 0;
+}
+.pm.on-dark {
+  border-color: rgba(255,255,255,0.15);
+  background: transparent;
+}
+.divider { height: 1px; background: var(--color-neutral-150); margin: 4px 0 14px; }
+</style></head><body>
+
+<div class="section-lbl">Payment marks · fond clair</div>
+<div class="row">
+  <div class="pm"><img src="../assets/payment-marks/visa.svg" alt="Visa"></div>
+  <div class="pm"><img src="../assets/payment-marks/mastercard.svg" alt="Mastercard"></div>
+  <div class="pm"><img src="../assets/payment-marks/cb.svg" alt="CB"></div>
+  <div class="pm"><img src="../assets/payment-marks/maestro.svg" alt="Maestro"></div>
+  <div class="pm"><img src="../assets/payment-marks/amex.svg" alt="Amex"></div>
+  <div class="pm"><img src="../assets/payment-marks/applepay.svg" alt="Apple Pay"></div>
+  <div class="pm"><img src="../assets/payment-marks/googlepay.svg" alt="Google Pay"></div>
+  <div class="pm"><img src="../assets/payment-marks/paypal.svg" alt="PayPal"></div>
+  <div class="pm"><img src="../assets/payment-marks/bancontact.svg" alt="Bancontact"></div>
+  <div class="pm"><img src="../assets/payment-marks/alma.svg" alt="Alma"></div>
+  <div class="pm"><img src="../assets/payment-marks/finetecture.svg" alt="Finetecture"></div>
+  <div class="pm"><img src="../assets/payment-marks/payplug.svg" alt="Payplug"></div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section-lbl">Payment marks · fond sombre</div>
+<div class="row dark-bg">
+  <div class="pm on-dark"><img src="../assets/payment-marks/visa-dark.svg" alt="Visa"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/mastercard-dark.svg" alt="Mastercard"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/cb-dark.svg" alt="CB"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/maestro-dark.svg" alt="Maestro"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/amex-dark.svg" alt="Amex"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/applepay-dark.svg" alt="Apple Pay"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/googlepay-dark.svg" alt="Google Pay"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/paypal-dark.svg" alt="PayPal"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/bancontact-dark.svg" alt="Bancontact"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/alma-dark.svg" alt="Alma"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/finetecture-dark.svg" alt="Finetecture"></div>
+  <div class="pm on-dark"><img src="../assets/payment-marks/payplug-dark.svg" alt="Payplug"></div>
+</div>
+
+</body></html>

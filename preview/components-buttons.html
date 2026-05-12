@@ -66,7 +66,8 @@ body {
   justify-content: center;
 }
 .arr {
-  width: 14px; height: 14px; flex-shrink: 0;
+  width: 24px; height: 24px;
+  flex-shrink: 0;
 }
 
 /* ── Primary ── */
@@ -88,10 +89,10 @@ body {
 .secondary.disabled{ background: var(--color-neutral-100); color: var(--color-neutral-350); cursor: not-allowed; }
 
 /* ── Outline ── */
-.outline         { background: var(--color-neutral-0); color: var(--color-neutral-950); border-color: var(--color-neutral-950); }
-.outline.hover   { background: var(--color-neutral-50); color: var(--color-neutral-950); border-color: var(--color-neutral-950); }
-.outline.focus   { background: var(--color-neutral-100); color: var(--color-neutral-950); border-color: var(--color-neutral-950); }
-.outline.disabled{ background: var(--color-neutral-0); color: var(--color-neutral-350); border-color: var(--color-neutral-200); cursor: not-allowed; }
+.outline         { background: #fff; color: var(--color-foreground-neutral-10); border-color: var(--color-border-neutral-5); }
+.outline.hover   { background: #fff; color: var(--color-foreground-neutral-10); border-color: var(--color-border-neutral-7); }
+.outline.focus   { background: #fff; color: var(--color-foreground-neutral-10); border-color: var(--color-border-neutral-10); }
+.outline.disabled{ background: #fff; color: var(--color-foreground-neutral-4);  border-color: var(--color-border-neutral-4); cursor: not-allowed; }
 </style></head><body>
 
 <div class="matrix">
@@ -105,93 +106,93 @@ body {
   <!-- Default -->
   <div class="state-lbl">Default</div>
   <div class="cell"><button class="btn primary">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn white">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn secondary">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn outline">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
 
   <!-- Hover -->
   <div class="state-lbl">Hover</div>
   <div class="cell"><button class="btn primary hover">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn white hover">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn secondary hover">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn outline hover">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
 
   <!-- Focus -->
   <div class="state-lbl">Focus</div>
   <div class="cell"><button class="btn primary focus">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn white focus">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn secondary focus">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn outline focus">
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
 
   <!-- Disabled -->
   <div class="state-lbl">Disabled</div>
   <div class="cell"><button class="btn primary disabled" disabled>
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn white disabled" disabled>
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn secondary disabled" disabled>
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
   <div class="cell"><button class="btn outline disabled" disabled>
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="10 18 4 12 10 6"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6464 6.64648L8.29285 12L13.6464 17.3536L14.3535 16.6465L9.70706 12L14.3535 7.35359L13.6464 6.64648Z" fill="currentColor"/></svg>
     Bouton
-    <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+    <svg class="arr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3536 6.64642L15.7071 12L10.3536 17.3535L9.64648 16.6464L14.2929 12L9.64648 7.35353L10.3536 6.64642Z" fill="currentColor"/></svg>
   </button></div>
 </div>
 

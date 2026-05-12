@@ -80,20 +80,15 @@ const IconStar = ({ filled = true, ...p }) => (
     path={<path d="M 12 4.5 L 14.472 9.528 L 20 10.361 L 16 14.25 L 16.944 19.75 L 12 17.153 L 7.056 19.75 L 8 14.25 L 4 10.361 L 9.528 9.528 L 12 4.5 Z"/>} />
 );
 
-// --------- LOGO (inline SVG wordmark) ---------
-function LogoBobochic({ height = 28 }) {
-  // Compact wordmark in currentColor so it inherits dark/light.
+// --------- LOGO ---------
+function LogoBobochic({ height = 28, invert = false }) {
   return (
-    <svg height={height} viewBox="0 0 340 64" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-      <text x="0" y="38" style={{
-        fontFamily: "var(--font-family-display)",
-        fontSize: 34, fontWeight: 700, letterSpacing: "-0.5px",
-      }}>Bobochic</text>
-      <text x="0" y="58" style={{
-        fontFamily: "var(--font-family-utility)",
-        fontSize: 11, fontWeight: 400, letterSpacing: "6px",
-      }}>P A R I S</text>
-    </svg>
+    <img
+      src="../../assets/logo-bobochicparis.svg"
+      alt="Bobochic Paris"
+      height={height}
+      style={{ display: "block", filter: invert ? "invert(1)" : "none" }}
+    />
   );
 }
 
@@ -104,7 +99,8 @@ const buttonBase = {
   fontSize: 14,
   lineHeight: "20px",
   letterSpacing: "-0.16px",
-  padding: "12px 24px",
+  height: 40,
+  padding: "0 20px",
   borderRadius: "var(--radius-button)",
   border: "1px solid transparent",
   cursor: "pointer",
@@ -112,22 +108,24 @@ const buttonBase = {
   alignItems: "center",
   justifyContent: "center",
   gap: 8,
+  boxSizing: "border-box",
   transition: "background-color .15s, color .15s, border-color .15s, box-shadow .15s, transform .08s",
   textDecoration: "none",
   whiteSpace: "nowrap",
 };
 function Button({ variant = "primary", size = "md", icon, iconEnd, children, ...rest }) {
   const sizes = {
-    sm: { padding: "8px 16px", fontSize: 12, lineHeight: "16px" },
+    sm: { height: 24, padding: "0 10px", fontSize: 12, lineHeight: "16px" },
     md: {},
-    lg: { padding: "16px 32px", fontSize: 16, lineHeight: "24px" },
+    lg: { height: 48, padding: "0 28px", fontSize: 16, lineHeight: "24px" },
   };
   const variants = {
-    primary: { background: "var(--color-neutral-950)", color: "#fff", boxShadow: "var(--elevation-1)" },
-    secondary: { background: "#fff", color: "var(--color-neutral-950)", borderColor: "var(--color-neutral-950)" },
+    primary: { background: "var(--color-neutral-950)", color: "#fff" },
+    secondary: { background: "var(--color-neutral-100)", color: "var(--color-neutral-950)" },
+    outline: { background: "#fff", color: "var(--color-neutral-950)", borderColor: "var(--color-neutral-950)" },
+    white: { background: "#fff", color: "var(--color-neutral-950)" },
     ghost: { background: "transparent", color: "var(--color-neutral-950)" },
-    red: { background: "var(--color-red-800)", color: "#fff", boxShadow: "var(--elevation-1)" },
-    light: { background: "#fff", color: "var(--color-neutral-950)" },
+    red: { background: "var(--color-red-800)", color: "#fff" },
   };
   return (
     <button {...rest}

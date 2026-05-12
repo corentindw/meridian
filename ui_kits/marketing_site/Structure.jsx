@@ -25,17 +25,21 @@ function Header({ onCartClick, cartCount, route, setRoute }) {
         padding: "18px 64px",
         gap: 24,
       }}>
-        <a onClick={() => setRoute({ kind: "home" })} style={{ cursor: "pointer", display: "inline-flex", color: "var(--color-neutral-950)" }}>
-          <LogoBobochic height={28}/>
+        <a onClick={() => setRoute({ kind: "home" })} style={{ cursor: "pointer", display: "inline-flex" }}>
+          <LogoBobochic height={32}/>
         </a>
+        {/* Search — DS input field style */}
         <div style={{
           display: "flex", alignItems: "center",
-          background: "var(--color-neutral-100)",
-          borderRadius: "var(--radius-md)",
-          padding: "10px 16px",
-          gap: 10,
+          height: 40,
+          border: "1px solid var(--color-neutral-200)",
+          borderRadius: "var(--radius-flag)",
+          background: "#fff",
+          gap: 8,
+          padding: "0 12px",
+          boxSizing: "border-box",
         }}>
-          <IconSearch size={18} style={{ color: "var(--color-neutral-600)" }}/>
+          <img src="../../assets/icons/magnifying-glass.svg" alt="" style={{ width: 18, height: 18, opacity: 0.5, flexShrink: 0 }}/>
           <input placeholder="Rechercher un canapé, un lit, un matelas…" style={{
             border: "none", background: "transparent", outline: "none",
             fontFamily: "var(--font-family-text)", fontSize: 14, color: "var(--color-neutral-950)",
@@ -76,7 +80,7 @@ function Footer() {
     <footer style={{ background: "var(--color-neutral-950)", color: "#fff", padding: "64px 64px 32px" }}>
       <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr 1fr 1fr", gap: 48 }}>
         <div>
-          <div style={{ color: "#fff" }}><LogoBobochic height={26}/></div>
+          <div style={{ color: "#fff" }}><LogoBobochic height={26} invert={true}/></div>
           <p style={{ marginTop: 24, fontFamily: "var(--font-family-text)", fontSize: 14, lineHeight: "22px", color: "var(--color-neutral-300)", maxWidth: 300 }}>
             Des meubles pensés pour durer, conçus en France et fabriqués avec les meilleurs tapissiers d'Europe.
           </p>
@@ -182,14 +186,14 @@ function ProductCard({ product, onOpen, onLike, liked }) {
     <article style={{
       background: "#fff",
       borderRadius: "var(--radius-lg)",
-      boxShadow: "var(--elevation-2)",
+      boxShadow: "var(--elevation-sm)",
       overflow: "hidden",
       display: "flex", flexDirection: "column",
       cursor: "pointer",
       transition: "box-shadow .15s, transform .15s",
     }}
-    onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "var(--elevation-3)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-    onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "var(--elevation-2)"; e.currentTarget.style.transform = ""; }}
+    onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "var(--elevation-md)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+    onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "var(--elevation-sm)"; e.currentTarget.style.transform = ""; }}
     onClick={() => onOpen?.(product)}>
       <div style={{
         aspectRatio: "4/3",

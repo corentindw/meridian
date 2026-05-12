@@ -128,7 +128,7 @@ A **cool, near-monochrome** system — white surfaces, near-black type, a single
 - Skeletons use a gentle 1.4 s shimmer on `--neutral-100` / `--neutral-150`.
 
 ### Hover / press / focus
-- **Hover** — darken by one step on the neutral scale (`--neutral-900` → `--neutral-800`), or lift elevation from `--elevation-1` → `--elevation-2`. Cards: shift `translateY(-2px)` + elevation bump.
+- **Hover** — darken by one step on the neutral scale (`--neutral-900` → `--neutral-800`), or lift elevation from `--elevation-sm` → `--elevation-md`. Cards: shift `translateY(-2px)` + elevation bump.
 - **Press** — remove elevation, `transform: scale(0.98)` — 60 ms.
 - **Focus** — 2 px outline `var(--color-border-neutral-7)` with `outline-offset: 2px`. Never coloured unless the element is already red/green.
 - **Disabled** — reduce opacity to 0.4, background to `--neutral-100`, text `--neutral-400`.
@@ -149,10 +149,9 @@ A **cool, near-monochrome** system — white surfaces, near-black type, a single
 
 ### Elevation (shadow system)
 Single-layer soft shadow, always black with low opacity, **25 px blur, zero offset**. Three stops only:
-- `--elevation-1` — card default: `0 0 25px rgba(12,12,13,0.05)`
-- `--elevation-2` — hover card: `0 0 25px rgba(12,12,13,0.10)`
-- `--elevation-3` — modal / popover: `0 0 25px rgba(12,12,13,0.15)`
-- Button rest: `0 1px 4px rgba(12,12,13,0.08)` (tiny tactile lift).
+- `--elevation-sm` — card default: `0 0 25px rgba(12,12,13,0.05)`
+- `--elevation-md` — hover card / sticky: `0 0 25px rgba(12,12,13,0.10)`
+- `--elevation-lg` — modal / popover: `0 0 25px rgba(12,12,13,0.15)`
 
 ### Transparency & blur
 - Transparency reserved for **glass nav bars** and **image-protection gradients** (20 % white, 40 % white for dark imagery).
@@ -160,11 +159,11 @@ Single-layer soft shadow, always black with low opacity, **25 px blur, zero offs
 - Never use translucent solid-colour panels — either it's white/solid, or it's glass over imagery.
 
 ### Card anatomy
-A canonical card = `16 px` radius, white fill, `--elevation-1`, **no border**, 24 px internal padding, 16 px gap between blocks. Images inside cards share the card's rounding on the **image side only** (top or left); the content side remains sharp.
+A canonical card = `0 px` radius, white fill, `--elevation-sm`, **no border**, 24 px internal padding, 16 px gap between blocks. Images inside cards share the card's rounding on the **image side only** (top or left); the content side remains sharp.
 
 ### Layout rules
 - **Fixed header** (top bandeau + nav) — typical height **208 px** on laptop, **220 px** on iPad, a two-row + status-bar stack on mobile.
-- **Sticky "scroll-to-top"** button, `64 × 64`, bottom-right, `--elevation-2`.
+- **Sticky "scroll-to-top"** button, `64 × 64`, bottom-right, `--elevation-md`.
 - **Breadcrumb** sits under the header (`Accueil > Page 1 > Page 2`), left-aligned, 12 px body, neutral-6 separators.
 - Page gutters: **64 px** on laptop, **32 px** on iPad, **16 px** on mobile. Content max-width ≈ 1408 px.
 

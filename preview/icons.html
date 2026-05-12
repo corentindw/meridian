@@ -1,33 +1,786 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><title>Meridian · Iconography</title>
+<html lang="fr"><head><meta charset="utf-8"><title>Meridian · Icon Set</title>
 <link rel="stylesheet" href="../colors_and_type.css">
 <style>
-body { margin: 0; background: #fff; padding: 20px 24px; box-sizing: border-box; width: 700px; font-family: var(--font-family-text); color: var(--color-neutral-950); }
-.grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; }
-.ic { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border: 1px solid var(--color-neutral-150); border-radius: var(--radius-md); color: var(--color-neutral-950); }
-.ic img { width: 24px; height: 24px; }
-.label { font-family: var(--font-family-code); font-size: 9px; text-align: center; margin-top: 4px; color: var(--color-neutral-550); }
-.caption { font-size: 11px; color: var(--color-neutral-550); margin-top: 12px; line-height: 1.5; }
+body {
+  margin: 0;
+  background: #fff;
+  padding: 18px 22px 20px;
+  box-sizing: border-box;
+  width: 700px;
+  font-family: var(--font-family-text);
+  color: var(--color-neutral-950);
+}
+.count {
+  font-family: var(--font-family-code);
+  font-size: 9px;
+  color: var(--color-neutral-450);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 6px 4px;
+}
+.icon-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.icon-cell img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.icon-name {
+  font-family: var(--font-family-code);
+  font-size: 7px;
+  color: var(--color-neutral-450);
+  text-align: center;
+  word-break: break-all;
+  line-height: 1.2;
+}
 </style></head><body>
+<div class="count">184 icônes · assets/icons/</div>
 <div class="grid">
-  <div><div class="ic"><img src="../assets/icons/search.svg"></div><div class="label">search</div></div>
-  <div><div class="ic"><img src="../assets/icons/cart.svg"></div><div class="label">cart</div></div>
-  <div><div class="ic"><img src="../assets/icons/heart.svg"></div><div class="label">heart</div></div>
-  <div><div class="ic"><img src="../assets/icons/user.svg"></div><div class="label">user</div></div>
-  <div><div class="ic"><img src="../assets/icons/menu.svg"></div><div class="label">menu</div></div>
-  <div><div class="ic"><img src="../assets/icons/close.svg"></div><div class="label">close</div></div>
-  <div><div class="ic"><img src="../assets/icons/truck.svg"></div><div class="label">truck</div></div>
-  <div><div class="ic"><img src="../assets/icons/textile.svg"></div><div class="label">textile</div></div>
-  <div><div class="ic"><img src="../assets/icons/arrow-left.svg"></div><div class="label">arrow-left</div></div>
-  <div><div class="ic"><img src="../assets/icons/arrow-right.svg"></div><div class="label">arrow-right</div></div>
-  <div><div class="ic"><img src="../assets/icons/caret-right.svg"></div><div class="label">caret-right</div></div>
-  <div><div class="ic"><img src="../assets/icons/caret-down.svg"></div><div class="label">caret-down</div></div>
-  <div><div class="ic"><img src="../assets/icons/plus.svg"></div><div class="label">plus</div></div>
-  <div><div class="ic"><img src="../assets/icons/minus.svg"></div><div class="label">minus</div></div>
-  <div><div class="ic"><img src="../assets/icons/check.svg"></div><div class="label">check</div></div>
-  <div><div class="ic"><img src="../assets/icons/star.svg"></div><div class="label">star</div></div>
-</div>
-<div class="caption">
-  Hairline geometric, 24×24 frame, <code style="font-family: var(--font-family-code);">currentColor</code> fill. Figma ships a handful of first-party icons; for anything not listed we recommend <b>Phosphor Thin</b> as a CDN fallback — same visual weight.
+  <div class="icon-cell">
+    <img src="../assets/icons/3d.svg" alt="3d">
+    <div class="icon-name">3d</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/add-list.svg" alt="add-list">
+    <div class="icon-name">add-list</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/add-product.svg" alt="add-product">
+    <div class="icon-name">add-product</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/agited-sleep.svg" alt="agited-sleep">
+    <div class="icon-name">agited-sleep</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/arrow-down.svg" alt="arrow-down">
+    <div class="icon-name">arrow-down</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/arrow-left.svg" alt="arrow-left">
+    <div class="icon-name">arrow-left</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/arrow-right.svg" alt="arrow-right">
+    <div class="icon-name">arrow-right</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/arrow-up.svg" alt="arrow-up">
+    <div class="icon-name">arrow-up</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/assurance.svg" alt="assurance">
+    <div class="icon-name">assurance</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/balance.svg" alt="balance">
+    <div class="icon-name">balance</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/battery.svg" alt="battery">
+    <div class="icon-name">battery</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/book.svg" alt="book">
+    <div class="icon-name">book</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/bureau.svg" alt="bureau">
+    <div class="icon-name">bureau</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/cake.svg" alt="cake">
+    <div class="icon-name">cake</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/calendar.svg" alt="calendar">
+    <div class="icon-name">calendar</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/canape.svg" alt="canape">
+    <div class="icon-name">canape</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/card-10x.svg" alt="card-10x">
+    <div class="icon-name">card-10x</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/card-2x.svg" alt="card-2x">
+    <div class="icon-name">card-2x</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/card-3x.svg" alt="card-3x">
+    <div class="icon-name">card-3x</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/card-4x.svg" alt="card-4x">
+    <div class="icon-name">card-4x</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/card.svg" alt="card">
+    <div class="icon-name">card</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/caret-double-left.svg" alt="caret-double-left">
+    <div class="icon-name">caret-double-left</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/caret-double.svg" alt="caret-double">
+    <div class="icon-name">caret-double</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/caret-down.svg" alt="caret-down">
+    <div class="icon-name">caret-down</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/caret-left.svg" alt="caret-left">
+    <div class="icon-name">caret-left</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/caret-right.svg" alt="caret-right">
+    <div class="icon-name">caret-right</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/caret-up.svg" alt="caret-up">
+    <div class="icon-name">caret-up</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/chain.svg" alt="chain">
+    <div class="icon-name">chain</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/chair-x2.svg" alt="chair-x2">
+    <div class="icon-name">chair-x2</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/chair-x4.svg" alt="chair-x4">
+    <div class="icon-name">chair-x4</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/chair.svg" alt="chair">
+    <div class="icon-name">chair</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/chambre.svg" alt="chambre">
+    <div class="icon-name">chambre</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/check-list.svg" alt="check-list">
+    <div class="icon-name">check-list</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/check.svg" alt="check">
+    <div class="icon-name">check</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/checkmark.svg" alt="checkmark">
+    <div class="icon-name">checkmark</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/circle-checkmark.svg" alt="circle-checkmark">
+    <div class="icon-name">circle-checkmark</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/circle-cross.svg" alt="circle-cross">
+    <div class="icon-name">circle-cross</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/circle-i.svg" alt="circle-i">
+    <div class="icon-name">circle-i</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/circle-parking.svg" alt="circle-parking">
+    <div class="icon-name">circle-parking</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/circle-pause.svg" alt="circle-pause">
+    <div class="icon-name">circle-pause</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/circle-play.svg" alt="circle-play">
+    <div class="icon-name">circle-play</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/circle-question-1.svg" alt="circle-question-1">
+    <div class="icon-name">circle-question-1</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/circle-question.svg" alt="circle-question">
+    <div class="icon-name">circle-question</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/clean.svg" alt="clean">
+    <div class="icon-name">clean</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/clock.svg" alt="clock">
+    <div class="icon-name">clock</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/clockwise.svg" alt="clockwise">
+    <div class="icon-name">clockwise</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/close.svg" alt="close">
+    <div class="icon-name">close</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/cloud.svg" alt="cloud">
+    <div class="icon-name">cloud</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/copy-doc.svg" alt="copy-doc">
+    <div class="icon-name">copy-doc</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/copy.svg" alt="copy">
+    <div class="icon-name">copy</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/corner-left.svg" alt="corner-left">
+    <div class="icon-name">corner-left</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/corner-right.svg" alt="corner-right">
+    <div class="icon-name">corner-right</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/coussin-none.svg" alt="coussin-none">
+    <div class="icon-name">coussin-none</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/coussin.svg" alt="coussin">
+    <div class="icon-name">coussin</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/cuisine.svg" alt="cuisine">
+    <div class="icon-name">cuisine</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/deco.svg" alt="deco">
+    <div class="icon-name">deco</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/delivery-service.svg" alt="delivery-service">
+    <div class="icon-name">delivery-service</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/depth.svg" alt="depth">
+    <div class="icon-name">depth</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/dialogue.svg" alt="dialogue">
+    <div class="icon-name">dialogue</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/diamond.svg" alt="diamond">
+    <div class="icon-name">diamond</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/disconnect.svg" alt="disconnect">
+    <div class="icon-name">disconnect</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/dog.svg" alt="dog">
+    <div class="icon-name">dog</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/dots-h.svg" alt="dots-h">
+    <div class="icon-name">dots-h</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/dots-v.svg" alt="dots-v">
+    <div class="icon-name">dots-v</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/double-dialogue.svg" alt="double-dialogue">
+    <div class="icon-name">double-dialogue</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/download.svg" alt="download">
+    <div class="icon-name">download</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/eco-design.svg" alt="eco-design">
+    <div class="icon-name">eco-design</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/eiffel-tower.svg" alt="eiffel-tower">
+    <div class="icon-name">eiffel-tower</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/enfant-et-bebe.svg" alt="enfant-et-bebe">
+    <div class="icon-name">enfant-et-bebe</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/envelope.svg" alt="envelope">
+    <div class="icon-name">envelope</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/estimate.svg" alt="estimate">
+    <div class="icon-name">estimate</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/euro.svg" alt="euro">
+    <div class="icon-name">euro</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/euro2.svg" alt="euro2">
+    <div class="icon-name">euro2</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/europe.svg" alt="europe">
+    <div class="icon-name">europe</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/extend.svg" alt="extend">
+    <div class="icon-name">extend</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/eye-none.svg" alt="eye-none">
+    <div class="icon-name">eye-none</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/eye.svg" alt="eye">
+    <div class="icon-name">eye</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/facebook.svg" alt="facebook">
+    <div class="icon-name">facebook</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/finger.svg" alt="finger">
+    <div class="icon-name">finger</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/gear.svg" alt="gear">
+    <div class="icon-name">gear</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/gender.svg" alt="gender">
+    <div class="icon-name">gender</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/gift.svg" alt="gift">
+    <div class="icon-name">gift</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/globe.svg" alt="globe">
+    <div class="icon-name">globe</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/grid-1x1.svg" alt="grid-1x1">
+    <div class="icon-name">grid-1x1</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/grid-1x2.svg" alt="grid-1x2">
+    <div class="icon-name">grid-1x2</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/grid-2x2.svg" alt="grid-2x2">
+    <div class="icon-name">grid-2x2</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/grid-3x3.svg" alt="grid-3x3">
+    <div class="icon-name">grid-3x3</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/handicap.svg" alt="handicap">
+    <div class="icon-name">handicap</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/headphones.svg" alt="headphones">
+    <div class="icon-name">headphones</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/heart-full.svg" alt="heart-full">
+    <div class="icon-name">heart-full</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/heart.svg" alt="heart">
+    <div class="icon-name">heart</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/height.svg" alt="height">
+    <div class="icon-name">height</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/home-assembly.svg" alt="home-assembly">
+    <div class="icon-name">home-assembly</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/house.svg" alt="house">
+    <div class="icon-name">house</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/info-product.svg" alt="info-product">
+    <div class="icon-name">info-product</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/instagram.svg" alt="instagram">
+    <div class="icon-name">instagram</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/jardin.svg" alt="jardin">
+    <div class="icon-name">jardin</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/jo.svg" alt="jo">
+    <div class="icon-name">jo</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/leaf.svg" alt="leaf">
+    <div class="icon-name">leaf</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/linkedin.svg" alt="linkedin">
+    <div class="icon-name">linkedin</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/literie.svg" alt="literie">
+    <div class="icon-name">literie</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/lock.svg" alt="lock">
+    <div class="icon-name">lock</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/magic-wand.svg" alt="magic-wand">
+    <div class="icon-name">magic-wand</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/magnifying-glass.svg" alt="magnifying-glass">
+    <div class="icon-name">magnifying-glass</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/map-marker.svg" alt="map-marker">
+    <div class="icon-name">map-marker</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/matelas.svg" alt="matelas">
+    <div class="icon-name">matelas</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/matress-arrow.svg" alt="matress-arrow">
+    <div class="icon-name">matress-arrow</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/medal.svg" alt="medal">
+    <div class="icon-name">medal</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/menu-burger.svg" alt="menu-burger">
+    <div class="icon-name">menu-burger</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/menu.svg" alt="menu">
+    <div class="icon-name">menu</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/meuble.svg" alt="meuble">
+    <div class="icon-name">meuble</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/microphone.svg" alt="microphone">
+    <div class="icon-name">microphone</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/minus.svg" alt="minus">
+    <div class="icon-name">minus</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/mite.svg" alt="mite">
+    <div class="icon-name">mite</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/mute.svg" alt="mute">
+    <div class="icon-name">mute</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/negociation.svg" alt="negociation">
+    <div class="icon-name">negociation</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/nouveau.svg" alt="nouveau">
+    <div class="icon-name">nouveau</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/package-express.svg" alt="package-express">
+    <div class="icon-name">package-express</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/package.svg" alt="package">
+    <div class="icon-name">package</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/pain.svg" alt="pain">
+    <div class="icon-name">pain</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/paper-plane.svg" alt="paper-plane">
+    <div class="icon-name">paper-plane</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/pencil.svg" alt="pencil">
+    <div class="icon-name">pencil</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/personal-shopper.svg" alt="personal-shopper">
+    <div class="icon-name">personal-shopper</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/phone.svg" alt="phone">
+    <div class="icon-name">phone</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/picture.svg" alt="picture">
+    <div class="icon-name">picture</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/piggy-bank.svg" alt="piggy-bank">
+    <div class="icon-name">piggy-bank</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/pin.svg" alt="pin">
+    <div class="icon-name">pin</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/pinterest.svg" alt="pinterest">
+    <div class="icon-name">pinterest</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/play.svg" alt="play">
+    <div class="icon-name">play</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/plus.svg" alt="plus">
+    <div class="icon-name">plus</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/pre-order.svg" alt="pre-order">
+    <div class="icon-name">pre-order</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/price-tag-pourcent.svg" alt="price-tag-pourcent">
+    <div class="icon-name">price-tag-pourcent</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/quick-buy.svg" alt="quick-buy">
+    <div class="icon-name">quick-buy</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/rearrange.svg" alt="rearrange">
+    <div class="icon-name">rearrange</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/recycled-bottle.svg" alt="recycled-bottle">
+    <div class="icon-name">recycled-bottle</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/return-product.svg" alt="return-product">
+    <div class="icon-name">return-product</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/rfid.svg" alt="rfid">
+    <div class="icon-name">rfid</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/salle-de-bain.svg" alt="salle-de-bain">
+    <div class="icon-name">salle-de-bain</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/scale-up.svg" alt="scale-up">
+    <div class="icon-name">scale-up</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/search.svg" alt="search">
+    <div class="icon-name">search</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/sejour.svg" alt="sejour">
+    <div class="icon-name">sejour</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/settings.svg" alt="settings">
+    <div class="icon-name">settings</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/share.svg" alt="share">
+    <div class="icon-name">share</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/shipping-cost.svg" alt="shipping-cost">
+    <div class="icon-name">shipping-cost</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/shopping-bag.svg" alt="shopping-bag">
+    <div class="icon-name">shopping-bag</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/side-panel.svg" alt="side-panel">
+    <div class="icon-name">side-panel</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/sleep.svg" alt="sleep">
+    <div class="icon-name">sleep</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/small-budget.svg" alt="small-budget">
+    <div class="icon-name">small-budget</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/sound.svg" alt="sound">
+    <div class="icon-name">sound</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/star.svg" alt="star">
+    <div class="icon-name">star</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/stars.svg" alt="stars">
+    <div class="icon-name">stars</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/store.svg" alt="store">
+    <div class="icon-name">store</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/sweat.svg" alt="sweat">
+    <div class="icon-name">sweat</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/table.svg" alt="table">
+    <div class="icon-name">table</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/tapis.svg" alt="tapis">
+    <div class="icon-name">tapis</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/temperature-ambiant.svg" alt="temperature-ambiant">
+    <div class="icon-name">temperature-ambiant</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/temperature-cold.svg" alt="temperature-cold">
+    <div class="icon-name">temperature-cold</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/temperature-hot.svg" alt="temperature-hot">
+    <div class="icon-name">temperature-hot</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/textile.svg" alt="textile">
+    <div class="icon-name">textile</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/texture-balanced.svg" alt="texture-balanced">
+    <div class="icon-name">texture-balanced</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/texture-firm.svg" alt="texture-firm">
+    <div class="icon-name">texture-firm</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/texture-soft.svg" alt="texture-soft">
+    <div class="icon-name">texture-soft</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/thickness.svg" alt="thickness">
+    <div class="icon-name">thickness</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/thumbs-down.svg" alt="thumbs-down">
+    <div class="icon-name">thumbs-down</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/thumbs-up.svg" alt="thumbs-up">
+    <div class="icon-name">thumbs-up</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/tiktok.svg" alt="tiktok">
+    <div class="icon-name">tiktok</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/time.svg" alt="time">
+    <div class="icon-name">time</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/trash.svg" alt="trash">
+    <div class="icon-name">trash</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/trees.svg" alt="trees">
+    <div class="icon-name">trees</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/truck.svg" alt="truck">
+    <div class="icon-name">truck</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/upload.svg" alt="upload">
+    <div class="icon-name">upload</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/user-medal.svg" alt="user-medal">
+    <div class="icon-name">user-medal</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/user-questionmark-1.svg" alt="user-questionmark-1">
+    <div class="icon-name">user-questionmark-1</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/user-questionmark.svg" alt="user-questionmark">
+    <div class="icon-name">user-questionmark</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/user.svg" alt="user">
+    <div class="icon-name">user</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/users.svg" alt="users">
+    <div class="icon-name">users</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/vitrine.svg" alt="vitrine">
+    <div class="icon-name">vitrine</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/waitlist.svg" alt="waitlist">
+    <div class="icon-name">waitlist</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/warning.svg" alt="warning">
+    <div class="icon-name">warning</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/weight.svg" alt="weight">
+    <div class="icon-name">weight</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/whatsapp.svg" alt="whatsapp">
+    <div class="icon-name">whatsapp</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/width.svg" alt="width">
+    <div class="icon-name">width</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/x.svg" alt="x">
+    <div class="icon-name">x</div>
+  </div>
+  <div class="icon-cell">
+    <img src="../assets/icons/youtube.svg" alt="youtube">
+    <div class="icon-name">youtube</div>
+  </div>
 </div>
 </body></html>

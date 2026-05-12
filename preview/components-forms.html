@@ -15,110 +15,96 @@ body {
 .field-label {
   font-family: var(--font-family-utility);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-sm);   /* 12px */
+  font-size: var(--font-size-sm);
   line-height: var(--line-height-sm);
-  letter-spacing: var(--letter-spacing-default);
   color: var(--color-neutral-950);
   margin-bottom: 4px;
 }
-.field-label .req { color: var(--color-neutral-550); }
+.field-label .req { color: var(--color-red-800); }
 
-/* ── Composite input shell ── */
+/* ── Shell ── */
 .input-shell {
   display: flex;
   align-items: stretch;
   height: 40px;
   border: 1px solid var(--color-neutral-200);
-  border-radius: var(--radius-flag); /* 0 = square */
-  overflow: hidden;
   box-sizing: border-box;
+  background: var(--color-neutral-0);
   transition: border-color .15s;
 }
-.input-shell.state-focus    { border-color: var(--color-neutral-950); border-width: 2px; }
-.input-shell.state-error    { border-color: var(--color-red-800);   border-width: 1px; }
-.input-shell.state-success  { border-color: var(--color-green-900); border-width: 1px; }
-.input-shell.state-disabled { border-color: var(--color-neutral-200); background: var(--color-neutral-100); }
+.input-shell.state-focus    { border: 1px solid var(--color-neutral-350); box-shadow: 0 0 0 2px var(--color-neutral-200); }
+.input-shell.state-error    { border: 1px solid var(--color-red-800); }
+.input-shell.state-error-focus { border: 1px solid var(--color-red-800); box-shadow: 0 0 0 2px var(--color-red-200); }
+.input-shell.state-success  { border: 1px solid var(--color-green-900); }
+.input-shell.state-success-focus { border: 1px solid var(--color-green-900); box-shadow: 0 0 0 2px var(--color-green-200); }
+.input-shell.state-disabled { border: 1px solid var(--color-neutral-200); background: var(--color-neutral-100); }
 
-/* ── Prefix slot (left) ── */
+/* ── Prefix slot ── */
 .input-prefix {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 0 10px;
-  background: var(--color-neutral-50);
+  gap: 4px;
+  padding: 0 8px;
+  background: transparent;
   border-right: 1px solid var(--color-neutral-200);
   flex-shrink: 0;
   font-family: var(--font-family-utility);
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-sm);
   color: var(--color-neutral-950);
-  white-space: nowrap;
 }
 .state-disabled .input-prefix { color: var(--color-neutral-400); }
 
-.prefix-tag {
-  background: var(--color-neutral-950);
-  color: var(--color-neutral-0);
-  font-size: 10px;
-  font-weight: var(--font-weight-strong);
-  padding: 2px 5px;
-  letter-spacing: 0.03em;
+/* filled value (orange/red text like in the figma) */
+.prefix-val {
+  color: var(--color-red-800);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
 }
-.state-disabled .prefix-tag { background: var(--color-neutral-300); }
+.state-disabled .prefix-val { color: var(--color-neutral-400); }
 
-.prefix-stepper {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  opacity: 0.5;
-}
-.prefix-stepper span {
-  display: block;
-  width: 10px;
-  height: 6px;
-  line-height: 1;
-  font-size: 8px;
-  text-align: center;
-  color: var(--color-neutral-700);
-}
+/* flag icon */
 
-/* ── Main field slot (right) ── */
+
+/* caret-double icon */
+.icon-caret-double {
+  width: 16px; height: 16px; flex-shrink: 0; color: var(--color-neutral-550);
+}
+.state-disabled .icon-caret-double { color: var(--color-neutral-300); }
+
+/* ── Field slot ── */
 .input-field {
   display: flex;
   align-items: center;
   flex: 1;
-  padding: 0 10px;
-  gap: 8px;
+  padding: 0 8px;
+  gap: 6px;
   min-width: 0;
 }
-.input-field input {
+
+/* grid-1x1 icon */
+.icon-grid {
+  width: 16px; height: 16px; flex-shrink: 0; color: var(--color-neutral-400);
+}
+.state-disabled .icon-grid { color: var(--color-neutral-300); }
+
+.input-text {
   flex: 1;
-  border: none;
-  outline: none;
   font-family: var(--font-family-text);
   font-size: var(--font-size-md);
-  line-height: var(--line-height-md);
-  color: var(--color-neutral-950);
-  background: transparent;
+  color: var(--color-neutral-400);
   min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.input-field input::placeholder { color: var(--color-neutral-400); }
-.input-field input:disabled { color: var(--color-neutral-400); cursor: not-allowed; }
+.input-text.filled { color: var(--color-neutral-950); }
+.state-disabled .input-text { color: var(--color-neutral-300); }
 
-.input-icon {
-  width: 16px; height: 16px;
-  border: 1px solid var(--color-neutral-300);
-  border-radius: 2px;
-  flex-shrink: 0;
+/* caret-down icon */
+.icon-caret-down {
+  width: 16px; height: 16px; flex-shrink: 0; color: var(--color-neutral-550);
 }
-.state-disabled .input-icon { border-color: var(--color-neutral-200); }
-
-.input-chevron {
-  flex-shrink: 0;
-  width: 16px; height: 16px;
-  color: var(--color-neutral-550);
-}
-.state-disabled .input-chevron { color: var(--color-neutral-300); }
+.state-disabled .icon-caret-down { color: var(--color-neutral-300); }
 
 /* ── Helper text ── */
 .field-help {
@@ -135,12 +121,12 @@ body {
 .field-help.help-success { color: var(--color-green-900); }
 .help-icon { width: 12px; height: 12px; flex-shrink: 0; }
 
-/* ── Grid layout ── */
-.grid {
+/* ── Grid ── */
+.col-heads {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 16px;
-  row-gap: 14px;
+  column-gap: 14px;
+  margin-bottom: 8px;
 }
 .col-head {
   font-family: var(--font-family-code);
@@ -148,34 +134,38 @@ body {
   color: var(--color-neutral-450);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 10px;
 }
-
-/* full-width disabled row */
-.full { grid-column: 1 / -1; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 14px;
+  row-gap: 12px;
+}
 </style></head><body>
 
-<div style="display: grid; grid-template-columns: repeat(3,1fr); column-gap: 16px; margin-bottom: 10px;">
-  <div class="col-head">Default / Focus</div>
+<div class="col-heads">
+  <div class="col-head">Default / Neutral</div>
   <div class="col-head">Error</div>
   <div class="col-head">Success</div>
 </div>
 
 <div class="grid">
 
-  <!-- Default -->
+  <!-- ===== ROW 1 : Empty / default ===== -->
+
+  <!-- Neutral default empty -->
   <div>
     <div class="field-label">Label<span class="req">*</span></div>
     <div class="input-shell">
       <div class="input-prefix">
-        <span class="prefix-tag">FR</span>
+        <img src="../assets/payment-marks/alma.svg" alt="Alma" style="width:36px;height:22px;object-fit:contain;display:block;flex-shrink:0;">
+        <span style="font-size:var(--font-size-sm);font-weight:600;">FR</span>
         <span>🇫🇷</span>
-        <div class="prefix-stepper"><span>▲</span><span>▼</span></div>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
       </div>
       <div class="input-field">
-        <div class="input-icon"></div>
-        <input type="text" placeholder="Text">
-        <svg class="input-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="input-text">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
       </div>
     </div>
     <div class="field-help">
@@ -184,19 +174,19 @@ body {
     </div>
   </div>
 
-  <!-- Error -->
+  <!-- Error empty -->
   <div>
     <div class="field-label">Label<span class="req">*</span></div>
     <div class="input-shell state-error">
       <div class="input-prefix">
-        <span class="prefix-tag">FR</span>
+        <img src="../assets/payment-marks/alma.svg" alt="Alma" style="width:36px;height:22px;object-fit:contain;display:block;flex-shrink:0;">
+        <span style="font-size:var(--font-size-sm);font-weight:600;">FR</span>
         <span>🇫🇷</span>
-        <div class="prefix-stepper"><span>▲</span><span>▼</span></div>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
       </div>
       <div class="input-field">
-        <div class="input-icon"></div>
-        <input type="text" placeholder="Text">
-        <svg class="input-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="input-text">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
       </div>
     </div>
     <div class="field-help help-error">
@@ -205,19 +195,19 @@ body {
     </div>
   </div>
 
-  <!-- Success -->
+  <!-- Success empty -->
   <div>
     <div class="field-label">Label<span class="req">*</span></div>
     <div class="input-shell state-success">
       <div class="input-prefix">
-        <span class="prefix-tag">FR</span>
+        <img src="../assets/payment-marks/alma.svg" alt="Alma" style="width:36px;height:22px;object-fit:contain;display:block;flex-shrink:0;">
+        <span style="font-size:var(--font-size-sm);font-weight:600;">FR</span>
         <span>🇫🇷</span>
-        <div class="prefix-stepper"><span>▲</span><span>▼</span></div>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
       </div>
       <div class="input-field">
-        <div class="input-icon"></div>
-        <input type="text" placeholder="Text">
-        <svg class="input-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="input-text">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
       </div>
     </div>
     <div class="field-help help-success">
@@ -226,19 +216,21 @@ body {
     </div>
   </div>
 
-  <!-- Focus -->
+  <!-- ===== ROW 2 : Filled ===== -->
+
+  <!-- Neutral filled -->
   <div>
     <div class="field-label">Label<span class="req">*</span></div>
-    <div class="input-shell state-focus">
+    <div class="input-shell">
       <div class="input-prefix">
-        <span class="prefix-tag">FR</span>
+        <img src="../assets/payment-marks/alma.svg" alt="Alma" style="width:36px;height:22px;object-fit:contain;display:block;flex-shrink:0;">
+        <span style="font-size:var(--font-size-sm);font-weight:600;">FR</span>
         <span>🇫🇷</span>
-        <div class="prefix-stepper"><span>▲</span><span>▼</span></div>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
       </div>
       <div class="input-field">
-        <div class="input-icon"></div>
-        <input type="text" value="Alma">
-        <svg class="input-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="input-text filled">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
       </div>
     </div>
     <div class="field-help">
@@ -252,14 +244,14 @@ body {
     <div class="field-label">Label<span class="req">*</span></div>
     <div class="input-shell state-error">
       <div class="input-prefix">
-        <span class="prefix-tag">FR</span>
+        <img src="../assets/payment-marks/alma.svg" alt="Alma" style="width:36px;height:22px;object-fit:contain;display:block;flex-shrink:0;">
+        <span style="font-size:var(--font-size-sm);font-weight:600;">FR</span>
         <span>🇫🇷</span>
-        <div class="prefix-stepper"><span>▲</span><span>▼</span></div>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
       </div>
       <div class="input-field">
-        <div class="input-icon"></div>
-        <input type="text" value="Alma">
-        <svg class="input-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="input-text filled">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
       </div>
     </div>
     <div class="field-help help-error">
@@ -273,14 +265,14 @@ body {
     <div class="field-label">Label<span class="req">*</span></div>
     <div class="input-shell state-success">
       <div class="input-prefix">
-        <span class="prefix-tag">FR</span>
+        <img src="../assets/payment-marks/alma.svg" alt="Alma" style="width:36px;height:22px;object-fit:contain;display:block;flex-shrink:0;">
+        <span style="font-size:var(--font-size-sm);font-weight:600;">FR</span>
         <span>🇫🇷</span>
-        <div class="prefix-stepper"><span>▲</span><span>▼</span></div>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
       </div>
       <div class="input-field">
-        <div class="input-icon"></div>
-        <input type="text" value="Alma">
-        <svg class="input-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="input-text filled">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
       </div>
     </div>
     <div class="field-help help-success">
@@ -289,26 +281,93 @@ body {
     </div>
   </div>
 
-  <!-- Disabled — full width -->
-  <div class="full">
-    <div class="field-label" style="color: var(--color-neutral-400);">Label<span class="req">*</span></div>
-    <div class="input-shell state-disabled" style="width: calc(33% - 8px);">
+  <!-- ===== ROW 3 : Focus ===== -->
+
+  <!-- Neutral focus -->
+  <div>
+    <div class="field-label">Label<span class="req">*</span></div>
+    <div class="input-shell state-focus">
       <div class="input-prefix">
-        <span class="prefix-tag">FR</span>
+        <img src="../assets/payment-marks/alma.svg" alt="Alma" style="width:36px;height:22px;object-fit:contain;display:block;flex-shrink:0;">
+        <span style="font-size:var(--font-size-sm);font-weight:600;">FR</span>
         <span>🇫🇷</span>
-        <div class="prefix-stepper"><span>▲</span><span>▼</span></div>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
       </div>
       <div class="input-field">
-        <div class="input-icon"></div>
-        <input type="text" placeholder="Text" disabled>
-        <svg class="input-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="input-text filled">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
       </div>
     </div>
-    <div class="field-help" style="color: var(--color-neutral-300);">
+    <div class="field-help">
       <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
       Helper text
     </div>
   </div>
+
+  <!-- Error focus -->
+  <div>
+    <div class="field-label">Label<span class="req">*</span></div>
+    <div class="input-shell state-error-focus">
+      <div class="input-prefix">
+        <img src="../assets/payment-marks/alma.svg" alt="Alma" style="width:36px;height:22px;object-fit:contain;display:block;flex-shrink:0;">
+        <span style="font-size:var(--font-size-sm);font-weight:600;">FR</span>
+        <span>🇫🇷</span>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
+      </div>
+      <div class="input-field">
+        <div class="input-text filled">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
+      </div>
+    </div>
+    <div class="field-help help-error">
+      <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      Helper text
+    </div>
+  </div>
+
+  <!-- Success focus -->
+  <div>
+    <div class="field-label">Label<span class="req">*</span></div>
+    <div class="input-shell state-success-focus">
+      <div class="input-prefix">
+        <img src="../assets/payment-marks/alma.svg" alt="Alma" style="width:36px;height:22px;object-fit:contain;display:block;flex-shrink:0;">
+        <span style="font-size:var(--font-size-sm);font-weight:600;">FR</span>
+        <span>🇫🇷</span>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
+      </div>
+      <div class="input-field">
+        <div class="input-text filled">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
+      </div>
+    </div>
+    <div class="field-help help-success">
+      <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      Helper text
+    </div>
+  </div>
+
+  <!-- ===== ROW 4 : Disabled (col 1 only) ===== -->
+  <div>
+    <div class="field-label" style="color:var(--color-neutral-400);">Label<span class="req">*</span></div>
+    <div class="input-shell state-disabled">
+      <div class="input-prefix">
+        <span style="font-size:var(--font-size-sm);font-weight:600;color:var(--color-neutral-400);">FR</span>
+        <span class="prefix-flag" style="opacity:0.4;"></span>
+        <svg class="icon-caret-double" viewBox="0 0 24 24" fill="none" style="color:var(--color-neutral-300)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.29291L16.3536 7.64646L15.6465 8.35357L12 4.70712L8.35359 8.35357L7.64648 7.64646L12 3.29291ZM7.64648 16.3536L8.35359 15.6465L12 19.2929L15.6465 15.6465L16.3536 16.3536L12 20.7071L7.64648 16.3536Z" fill="currentColor"/></svg>
+      </div>
+      <div class="input-field">
+        <svg class="icon-grid" viewBox="0 0 24 24" fill="none" style="color:var(--color-neutral-300)"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 2.5H21.5V21.5H2.5V2.5ZM3.5 3.5V20.5H20.5V3.5H3.5Z" fill="currentColor"/></svg>
+        <div class="input-text" style="color:var(--color-neutral-400);">Text</div>
+        <svg class="icon-caret-down" viewBox="0 0 24 24" fill="none" style="color:var(--color-neutral-300)"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.64648 10.3535L7.35359 9.64642L12 14.2929L16.6465 9.64642L17.3536 10.3535L12 15.7071L6.64648 10.3535Z" fill="currentColor"/></svg>
+      </div>
+    </div>
+    <div class="field-help" style="color:var(--color-neutral-300);">
+      <svg class="help-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      Helper text
+    </div>
+  </div>
+  <div></div>
+  <div></div>
 
 </div>
 </body></html>
